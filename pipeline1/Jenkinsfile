@@ -33,6 +33,7 @@ pipeline {
             }    
             steps {
                 sh "echo Hello World from Jenkins on ${hostname}"
+                sh "oc whoami"
             }
         }
 
