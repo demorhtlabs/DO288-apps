@@ -30,6 +30,7 @@ pipeline {
               node {
                 label 'nodejs'
               }
+            }    
             steps {
                 sh "echo Hello World from Jenkins on ${hostname}"
             }
