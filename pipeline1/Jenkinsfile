@@ -26,10 +26,14 @@ pipeline {
        
 
         stage('stage 2') {
+            agent {
+              node {
+                label 'nodejs'
+              }
             steps {
-                sh 'echo Hello World from Jenkins'
+                sh "echo Hello World from Jenkins on ${hostname}"
             }
         }
 
-    }
+    } 
 }
